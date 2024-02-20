@@ -13,7 +13,11 @@ using namespace std;
  * @param z : (int)
  * @return int
 */
-
+int sumOfThree(int x, int y, int z){
+    int x = x;
+    int y = y;
+    int z = z;
+}
 /** division
  * @brief returns x / y
  * 
