@@ -14,9 +14,8 @@ using namespace std;
  * @return int
 */
 int sumOfThree(int x, int y, int z){
-    int x = x;
-    int y = y;
-    int z = z;
+    int sum= x + y + z;
+    return sum;
 }
 /** division
  * @brief returns x / y
@@ -25,6 +24,10 @@ int sumOfThree(int x, int y, int z){
  * @param y : (double)
  * @return double
 */
+double division(double x, double y){
+    double divide = x / y;
+    return divide;
+}
 
 /** isGreaterThan
  * @brief returns whether x is greater than y
@@ -34,6 +37,10 @@ int sumOfThree(int x, int y, int z){
  * @return true: x is greater than y
  * @return false : x is less than or equal to y
 */
+bool isGreaterThan(double x, int y){
+    bool Gt = x > y;
+    return Gt;
+}
 
 /** select
  * @brief output the statements based on func_type
@@ -43,9 +50,21 @@ int sumOfThree(int x, int y, int z){
  *  "comparison"   : "The first value being greater than the second value is "
  *  All other phrases: "Invalid function type\n"
  * @param func_type : (string)
- * @return string
+ * @return string()
 */
-
+string select(string func_type){
+    string out = "";
+    if (func_type == "sum"){
+         out = "The sum is ";
+    } else if (func_type == "division"){
+         out = "The quotient is ";
+    } else if (func_type == "comparison"){
+         out = "The first value being greater than the second value is ";
+    } else {
+         out = "Invalid function type\n";
+    }
+    return out;
+}
 /** myPrint
  * @brief Calls select() to print out the output with the correct prompt
  * 
